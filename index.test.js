@@ -102,14 +102,12 @@ test("getPeopleByLastName() returns an array of people of a certain lastName", (
 // Hint: use Array.prototype.find for the implementation
 test("findPersonById() returns the full object of a person", () => {
   const result = findPersonById(people, 2);
-  expect(result).toEqual([
-    {
-      id: 2,
-      firstName: "John",
-      lastName: "Doe",
-      age: 18,
-    },
-  ]);
+  expect(result).toEqual({
+    id: 2,
+    firstName: "John",
+    lastName: "Doe",
+    age: 18,
+  });
 });
 
 // Hint: implementation should use Array.prototype.some
@@ -129,7 +127,7 @@ test("getFullNamesSortedByAge() returns an array of last names sorted by age", (
     "John Doe",
     "Jane Doe",
     "Luke Skywalker",
-    "Max Musterman",
+    "Max Mustermann",
     "Erika Musterfrau",
   ]);
 });
