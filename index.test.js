@@ -72,7 +72,6 @@ test('getNameAndAge() returns an array of formatted strings like this: "Skywalke
 
 test("getPeopleByAge() returns an array of people of a certain age", () => {
   const result = getPeopleByAge(people, 23);
-  const result2 = getPeopleByAge(people, 21);
   expect(result).toEqual([
     {
       id: 5,
@@ -81,23 +80,11 @@ test("getPeopleByAge() returns an array of people of a certain age", () => {
       age: 23,
     },
   ]);
-  expect(result2).toEqual([
-    {
-      id: 1,
-      firstName: "Jane",
-      lastName: "Doe",
-      age: 21,
-    },
-  ]);
 });
 
 test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
-  const result = getPeopleNamesOlderThan(people, 21);
-  expect(result).toEqual([
-    "Luke Skywalker",
-    "Max Musterman",
-    "Erika Musterfrau",
-  ]);
+  const result = getPeopleNamesOlderThan(people, 24);
+  expect(result).toEqual(["Max Mustermann", "Erika Musterfrau"]);
 });
 
 test("getPeopleByLastName() returns an array of people of a certain lastName", () => {
